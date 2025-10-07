@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About • Goldmine Ceramics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html" class="logo">Goldmine Ceramics</a>
+            </div>
+            <nav class="header-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="contact.html" class="cta-header" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;">Order Now</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="page-title">About Goldmine Ceramics</h1>
+            <p class="page-subtitle">Crafting enduring beauty with precision, innovation, and passion.</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Welcome to Goldmine Ceramics Pakistan, a leading name in the realm of tile manufacturing, dedicated to crafting superior-quality floor tiles that redefine spaces with elegance and endurance. With an illustrious history in the industry, we pride ourselves on producing an extensive range of top-notch floor tiles that elevate interiors and endure the test of time.</p>
+                <p>At Goldmine Ceramics, our manufacturing prowess combines state-of-the-art technology with the finest raw materials, resulting in tiles of exceptional quality, resilience, and aesthetic appeal. Our commitment to innovation and excellence reflects in each tile we produce, offering a diverse selection of designs, patterns, and finishes that cater to diverse tastes and architectural styles.</p>
+                <p>As manufacturers, we prioritize precision and durability, ensuring that every tile leaving our facility meets stringent quality standards. Our dedication to delivering excellence has positioned us as a trusted choice for homeowners, builders, and designers seeking tiles that seamlessly blend style and functionality.</p>
+                <p>From contemporary motifs to timeless classics, our comprehensive range of floor tiles caters to various design preferences and project requirements. We understand the importance of environmental sustainability, and our manufacturing processes align with eco-friendly practices without compromising on the superior quality of our tiles.</p>
+                <p>Trust Goldmine Ceramics Pakistan as your reliable partner in transforming spaces with exceptional floor tiles. Whether it’s for residential, commercial, or industrial projects, our commitment to craftsmanship and customer satisfaction remains unwavering.</p>
+                <p>Experience the unmatched craftsmanship and durability of Goldmine Ceramics floor tiles today. Step into a world where quality meets innovation and witness how our tiles can redefine your spaces with enduring beauty.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/5.jpg" alt="Goldmine Ceramics - Premium floor tiles" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Goldmine Ceramics. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript: same behavior as index -->
+    <script>
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
+
